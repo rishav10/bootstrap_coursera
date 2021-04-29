@@ -30,7 +30,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginJSModal">
                         <span class="fa fa-sign-in"></span>Login
                     </a>
                 </span>
@@ -88,8 +88,8 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a class="btn btn-warning btn-lg text-white btn-block nav-link" data-toggle="modal"  
-                        data-target="#reserveTableModal" role="button">Reserve Table</a>
+                    <a class="btn btn-warning btn-lg text-white btn-block nav-link"   
+                        id="reserveTableBtn" role="button">Reserve Table</a>
                 </div>
             </div>
 
@@ -413,8 +413,25 @@
                     $("#carouselButton").children("span").removeClass('fa-play');
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
-            });
+            });                                                           
     </script>
+
+    <script>
+        $(document).ready(function(){
+            $("#loginJSModal").click(function(){
+                $("#loginModal").modal();
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $("#reserveTableBtn").click(function(){
+                $("#reserveTableModal").modal();
+            });
+        });
+    </script>
+
     <!-- 
         tooltip scrpit whcih will show message when we over mouse pointer over it
         <script>
